@@ -1,11 +1,12 @@
 import {createAudioElement, createButtonElement, bindEvents} from "./scripts/html.js";
 
+
 const sounds = ['clap', 'hihat', 'kick', 'perc', 'snare', 'tom']
 const soundObjs = sounds.reduce((acc, sound) =>{
     acc.push({
         filename : `sounds/${sound}.wav`,
         name: sound,
-        id: cuid()
+        id: cuid
     })
     return acc
 }, [])
