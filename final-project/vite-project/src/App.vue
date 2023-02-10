@@ -1,16 +1,17 @@
 <template>
   <div>
-    <h1>Rock-Paper-Scissors</h1>
+    <h1>Rock Paper Scissors Game</h1>
+    <h3>Is it hard for you to make a decision? Play rock paper scissors!</h3>
     <div>
-      <button @click="play('rock')">Rock</button>
-      <button @click="play('paper')">Paper</button>
-      <button @click="play('scissors')">Scissors</button>
+      <img src="/rock-illustration.svg" alt="rock icon" @click="play('rock')">
+      <img src="/paper-illustration.svg" alt="paper icon" @click="play('paper')">
+      <img src="/scissors-illustration.svg" alt="scissors icon" @click="play('scissors')">
     </div>
-    <div v-if="result">
-      You chose {{ playerChoice }} and the computer chose {{ computerChoice }}.
-      <span v-if="result === 'win'" style="color: green">You win!</span>
-      <span v-if="result === 'lose'" style="color: red">You lose!</span>
-      <span v-if="result === 'tie'" style="color: blue">It's a tie!</span>
+    <div v-if="result" class="results">
+      <p>You chose {{ playerChoice }} and the computer chose {{ computerChoice }}.</p>
+      <span v-if="result === 'win'" style="color: #2bdc2b">You win!</span>
+      <span v-if="result === 'lose'" style="color: #ff6767">You lose!</span>
+      <span v-if="result === 'tie'" style="color: #2e9fff">It's a tie!</span>
     </div>
   </div>
 </template>
